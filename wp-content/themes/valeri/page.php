@@ -560,10 +560,10 @@
 	<script src="<?=DIR?>/src/jquery.maskedinput105fb.js"></script>
 	<script src="<?=DIR?>/src/jquery.fancybox.packa6299.js"></script>
 	<script src="<?=DIR?>/src/countdown.min42648.js"></script>
-	<script src="<?=DIR?>/src/plugins7525e.js"></script>
+	<!--<script src="<?=DIR?>/src/plugins7525e.js"></script>-->
 	<script src="<?=DIR?>/src/main55af5.js"></script>
 	<script src="<?=DIR?>/src/jquery.cookied5496.js"></script>
-	<script type="text/javascript" src="<?=DIR?>/src/jqueryc32eb.jsonc32eb.js"></script>
+	<!--<script type="text/javascript" src="<?=DIR?>/src/jqueryc32eb.jsonc32eb.js"></script>-->
 	<script src="<?=DIR?>/src/init29fc26.js"></script>
 	<script type="text/javascript" src="<?=DIR?>/src/slick.min.js"></script>
 	
@@ -577,7 +577,16 @@
     
   <script>
 
+    
     $( document ).ready(function() {
+
+        $('.spanclick').click(function(){
+            var par = $(this).parents('.cat-info');
+            console.log('test');
+            $('.desc', par).fadeToggle(200);
+        });
+      
+      /*
       let searchParams = new URLSearchParams(window.location.search)
 
       let needParams = [      
@@ -614,14 +623,12 @@
         
       });
 
-      $('.spanclick').click(function(){
-        var par = $(this).parents('.cat-info');
-        console.log('test');
-        $('.desc', par).fadeToggle(200);
-      });
+
+      
+    */
     });
 
-    
+    /*
     function createCookie(name, value, days) {
       var expires;
 
@@ -659,9 +666,9 @@
             }
           ]
      });
+*/
 
-
-    
+  
   </script>
   
     <script type="text/javascript">
