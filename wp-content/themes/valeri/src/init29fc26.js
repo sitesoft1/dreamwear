@@ -1,11 +1,11 @@
 var POPULAR = function (id, count) {
-
+/*
     $.ajax({
         type: "POST",
         url: '/cart/addtocart',
         data: {id: id, q: count},
     });
-
+*/
 }
 // правка на el-postel
 
@@ -75,6 +75,7 @@ $(document).ready(function () {
     cart = new Cart('cart');
     var cartButton = $(".top_button");
 
+
     function sendMessage(text){
         var wpcf = $('#wpcf7-f49-o1');
         var area = $('.wpcf7-textarea', wpcf);
@@ -90,6 +91,8 @@ $(document).ready(function () {
 
 
     }
+
+
     // добавляем  товар в корзину
     $(".add_to_cart").click(function () {
 
@@ -519,11 +522,13 @@ function Cart(name) {
     this._init();
 }
 
+/*
 var initCart = function (block) {
     // Сохранение
     $("form .Buttons .send", block).click(function () {
         $(this).unbind();
         $("form", block).submit(function () {
+
             $(this).ajaxSubmit({
                 success: function (data) {
                     if (data == 'ok') {
@@ -630,7 +635,10 @@ var initCart = function (block) {
         $(".topbutton.cart").click();
     });
 }
+*/
 
+
+/*
 var initOrderForm = function (block) {
     // Сохранение
     $("form .Buttons .send", block).click(function () {
@@ -643,30 +651,6 @@ var initOrderForm = function (block) {
                 success: function (data) {
 
                     //Гдето то тут запускаем транзакцию
-
-                    /*  setTimeout(function () {
-                          window.b_criteo_data = window.b_criteo_data || [];
-                          window.b_criteo_id = window.b_criteo_id || false;
-
-                          if (window.b_criteo_id !== false) {
-                              console.log(window.b_criteo_data);
-                              console.log(window.b_criteo_id);
-
-                              window.criteo_q = window.criteo_q || [];
-                              window.criteo_q.push(
-                                  {event: "setAccount", account: 43530},
-                                  {event: "setSiteType", type: "d"},
-                                  {event: "trackTransaction", id: window.b_criteo_id, item: window.b_criteo_data}
-                              );
-
-                              window.b_criteo_id = false;
-
-                              console.log('trackTransaction');
-                          }
-
-
-                      }, 1000);
-  */
 
                     if (data == 'ok') {
                         //eval('dataLayer.push({'+ data+'});');
@@ -708,6 +692,8 @@ var initOrderForm = function (block) {
         });
 
 }
+*/
+
 
 function getBodyScrollTop() {
     return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
